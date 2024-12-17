@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>춘천</title>
+    <style>
+        div{
+            height: 200px;
+            background-color: rgb(219, 235, 249);
+        }
+        div.tour{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.food{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.description1{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.description2{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tour">
+        <h2>관광지</h2>
+        <form>
+            <select name="tour" id="tour" onchange="showTourDescription()">
+                <option value="1">남이섬</option>
+                <option value="2">레고랜드</option>
+                <option value="3">김유정역</option>
+                <option value="4">국립춘천숲체원</option>
+                <option value="5">책과 인쇄박물관</option>
+            </select>
+        </form>
+    </div>
+    <div class="description1" id="description1"></div><br>
+    <div class="food">
+        <h2>음식</h2>
+        <form>
+            <select name="food" id="food" onchange="showFoodDescription()">
+                <option value="1">닭갈비</option>
+                <option value="2">막국수</option>
+                <option value="3">민물회</option>
+            </select>
+        </form>
+    </div>
+    <div class="description2" id="description2"></div>
+
+    <script>
+         function showTourDescription() {
+            const select = document.getElementById('tour');
+            const description = document.getElementById('description1');
+            const value = select.value;
+
+            switch (value) {
+                case '1':
+                    description.innerHTML = '동화나라 노래의 섬 남이섬은 원래는 구릉지로 만들어진 작은 봉우리였다고 한다. 지금은 문화예술 자연생태의 청정보고이다. 사시사철 다양한 전시프로그램과 문화행사 등을 개최해 오고 있으며, 어린 친구들에게는 꿈과 희망을 심어주고, 연인들에게는 사랑과 아름다운 추억을 선사하는 장소이다.<br><br><a href="https://map.naver.com/p/entry/place/11491866?c=16.06,0,0,0,dh">남이섬</a>';
+                    break;
+                case '2':
+                    description.innerHTML = '세계에서 10번째이자 아시아에서 3번째로 개장한 테마파크. 의암호 가운데 자리한 하중도섬에서 7개 테마로 조성된 40여 개의 놀이기구와 레고로 만들어진 다양한 볼거리를 즐길 수 있다.<br><br><a href="https://map.naver.com/p/entry/place/1798639977?c=16.06,0,0,0,dh">레고랜드</a>';
+                    break;
+                case '3':
+                    description.innerHTML = '지금은 폐역이 된 옛 김유정역은 많은 사람들에게 추억의 공간으로, 방송 촬영 명소로도 자리매김하고 있다. 또한 포토존, 미니전시관 등의 체험활동도 즐길 수 있다.<br><br><a href="https://map.naver.com/p/entry/place/11636519?c=16.06,0,0,0,dh">김유정역</a>';
+                    break;
+                case '4':
+                    description.innerHTML = '자연경관과 생태가 잘 보전된 신북읍 삼한골 계곡 일대에 조성된 휴양림으로 산림문화가 특화된 새로운 형태의 휴양시설이다. 기존어린이 중심으로 조성된 숲체원들과는 달리, 성인과 청소년을 주 대상으로 레포츠와 캠핑, 휴양을 특화해 조성되었다.<br><br><a href="https://map.naver.com/p/entry/place/1042791937?c=16.06,0,0,0,dh">국립춘천숲체원</a>';
+                    break;
+                case '5':
+                    description.innerHTML = '책과 인쇄박물관은 강원특별자치도 춘천에 있는 활자 인쇄의 모든 자료가 전시된 박물관이다. 세계에서 가장 앞섰던 우리의 책과 인쇄문화의 소중함을 알리기 위해 책과 인쇄를 깊이 이해하고자 설립됐다. 박물관 건물은 앞에서 보면 여러 크기의 책들이 책장에 꽂혀 있는 모습이고, 위에서 보면 고이 접은 쪽지편지의 모양을 하고 있다. 책과 인쇄박물관의 건축물은 "그리움이 쌓여 시(時)가 된 박물관"이라는 부제를 가지고 있다.<br><br><a href="https://map.naver.com/p/entry/place/36648711?c=16.06,0,0,0,dh">책과 인쇄박물관</a>';
+                    break;
+            }
+         }
+         function showFoodDescription() {
+            const select = document.getElementById('food');
+            const description = document.getElementById('description2');
+            const value = select.value;
+
+            switch (value) {
+                case '1':
+                    description.innerHTML = '닭갈비는 갈비 자체가 아니라 토막 낸 닭을 포를 뜨듯이 도톰하게 펴서 양념에 재웠다가 갖은 야채와 함께 철판에 볶아 먹는 요리이다.<br><br><a href="https://map.naver.com/p/entry/place/11544030?c=16.06,0,0,0,dh">통나무집닭갈비</a><br><a href="https://map.naver.com/p/entry/place/11711535?c=16.06,0,0,0,dh">원조숯불닭불고기</a>';
+                    
+                    break;
+                case '2':
+                    description.innerHTML = '막국수란 이름의 유래에 대해서는 정확히 알 수 없으나 복잡한 조리과정과 재료 없이도 간단히 해 먹을 수 있다는 의미에서 생겨난 것으로 보인다. 순 메밀가루를 반죽하여 국수틀에 뽑아낸 면을 금방 삶아내어 김치나 동치미 국물에 말아먹거나 야채와 양념으로 버무려서 식초, 겨자, 육수를 곁들여 먹으면 좋은 맛을 즐길 수 있다.<br><br><a href="https://map.naver.com/p/entry/place/11486239?c=16.06,0,0,0,dh">실비막국수</a><br><a href="https://map.naver.com/p/entry/place/10966463?c=16.06,0,0,0,dh">명가 춘천막국수</a>';
+                    break;
+                case '3':
+                    description.innerHTML = '춘천호, 소양호는 내수면어업이 발달되어 향어, 송어 등의 양식이 활발하다. 그래서 춘천에서의 민물 회는 저렴한 가격에 신선하고 양이 많은 것이 장점이다. 자연산으로 내놓은 쏘가리, 빙어도 별미로 즐길 수 있다. 특히 겨울철에 맛보는 빙어 회는 별미 중의 별미이다.<br><br><a href="https://map.naver.com/p/entry/place/1040081110?c=16.06,0,0,0,dh">잠실집</a><br><a href="https://map.naver.com/p/entry/place/1702322383?c=16.06,0,0,0,dh">순금송어</a>';
+                    break;
+            }
+         }
+         
+    </script>
+</body>
+</html>

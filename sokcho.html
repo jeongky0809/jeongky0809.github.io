@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속초</title>
+    <style>
+        div{
+            height: 200px;
+            background-color: rgb(219, 235, 249);
+        }
+        div.tour{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.food{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.description1{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.description2{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tour">
+        <h2>관광지</h2>
+        <form>
+            <select name="tour" id="tour" onchange="showTourDescription()">
+                <option value="1">뮤지엄엑스</option>
+                <option value="2">영금정</option>
+                <option value="3">영랑호</option>
+                <option value="4">갯배</option>
+                <option value="5">아바이마을</option>
+            </select>
+        </form>
+    </div>
+    <div class="description1" id="description1"></div><br>
+    <div class="food">
+        <h2>음식</h2>
+        <form>
+            <select name="food" id="food" onchange="showFoodDescription()">
+                <option value="1">오징어순대</option>
+                <option value="2">닭강정</option>
+                <option value="3">아바이순대</option>
+            </select>
+        </form>
+    </div>
+    <div class="description2" id="description2"></div>
+
+    <script>
+         function showTourDescription() {
+            const select = document.getElementById('tour');
+            const description = document.getElementById('description1');
+            const value = select.value;
+
+            switch (value) {
+                case '1':
+                    description.innerHTML = '세상에서 가장 진화된 몰입형 전시 체험 공간. 판타지 미디어 아트 뮤지엄. MuseumX 최고 수준의 미디어 아트, 디지털기술, 그리고 엔터테인먼트가 결합한 새로운 차원의 몰입형 놀이터 뮤지엄엑스에 들어서는 순간, 또 다른 판타지 여행이 시작된다.<br><br><a href="https://map.naver.com/p/entry/place/1507146192?c=16.06,0,0,0,dh">뮤지엄엑스</a>';
+                    break;
+                case '2':
+                    description.innerHTML = '설악산 줄기가 바다를 향해 내달리다가 바다와 만나는 지점이 영금정이다. 영금정은 파도가 석벽에 부딪치면서 내는 소리를 거문고를 타는 것과 같은 소리를 낸다는 뜻에서 붙여진 이름이다. 영금정 일대는 일년 내내 관광객과 속초시민이 방문하는 속초관광의 중심 중 하나다.<br><br><a href="https://map.naver.com/p/entry/place/15085338?c=16.06,0,0,0,dh">영금정</a>';
+                    break;
+                case '3':
+                    description.innerHTML = '둘레 7.8㎞. 면적 1.21㎢. 수심 8.5m. 자연호수이다. 신라의 화랑 영랑이 이 호수를 발견하여 붙여진 것이라고 삼국유사에 근거하여 전해진다. 신라시대 화랑 영랑은 무술대회장인 금성(지금의 경주)을 가던 중 이 호수에 이르렀다. 화랑이 자신의 본분을 잊고 오래 머무른 만큼이나 호수의 경관이 뛰어난 곳으로 예전부터 사람들의 발길이 이어지고 있다.<br><br><a href="https://map.naver.com/p/entry/place/13491910?c=16.06,0,0,0,dh">영랑호</a>';
+                    break;
+                case '4':
+                    description.innerHTML = '갯배는 속초시내와 청호동 아바이 마을 사이에 놓인 속초항 수로를 건너는 유일한 교통수단이다. 긴 선 두 가닥을 매어 놓고 철선 하나에 각각 배를 1대씩 고정시켜 갈고리를 철선에 걸어 당기면서 배를 앞으로 끌어당기는 방법으로 운행된다.<br><br><a href="https://map.naver.com/p/entry/place/38331607?c=16.06,0,0,0,dh">갯배</a>';
+                    break;
+                case '5':
+                    description.innerHTML = '아바이마을은 함경도 실향민들이 많이 살고 있다고 해서 아바이마을로 불린다. 아바이란 함경도 사투리로 보통 나이 많은 남성을 뜻한다. 1950년 한국전쟁으로 피난 내려온 함경도 실향민들이 집단으로 정착한 마을이다. 한국전쟁 중 이북에서 내려온 실향민들은 잠시 기다리면 고향에 돌아갈 수 있으리라는 희망을 품고 이곳 모래사장에 임시로 정착하면서 마을을 만들었다. 모래사장 땅이라 집을 짓기도 쉽지 않고 식수 확보도 어려운 곳이었다. 아바이마을 실향민들은 같은 고향 출신사람들끼리 모여 살면서 신포마을, 정평마을, 홍원마을, 단천마을, 앵고치마을, 짜고치마을, 신창마을, 이원마을 등 집단촌을 이뤘다. 아바이마을은 영화 및 드라마 촬영장소 자주 자주 소개되는 유명 관광지이다.<br><br><a href="https://map.naver.com/p/entry/place/12108687?c=16.06,0,0,0,dh">아바이마을</a>';
+                    break;
+            }
+         }
+         function showFoodDescription() {
+            const select = document.getElementById('food');
+            const description = document.getElementById('description2');
+            const value = select.value;
+
+            switch (value) {
+                case '1':
+                    description.innerHTML = '오징어를 통째로 더듬어 씻고 그 속에 찰밥과 무청, 당근, 양파, 깻잎을 넣어 쪄먹는 오징어 순대. 쫄깃하면서도 담백한 맛이 일품일 뿐 아니라, 영양가도 풍부해서 식사 대용으로 충분하다. 찰밥은 소금물을뿌리면서 미리 쪄두고, 찰밥과 야채 버무린 것을 오징어 속에 채울 때는 여유분을 두어야 찜통에 쪘을때 밖으로 비어져나오지 않는다. 겨자 초장에 찍어 먹으면 톡 쏘는 맛이 산뜻하면서도 개운하다. 돼지창자를 구할수 없어 오징어에 각종 주/부식을 넣어 만들기 시작하여 탄생한 오징어 순대의 독특하고 담백한 맛을 느낄 수 있다.<br><br><a href="https://map.naver.com/p/entry/place/1926584483?c=16.06,0,0,0,dh">속초새우아저씨(속초중앙시장)</a><br><a href="https://map.naver.com/p/entry/place/1021223975?c=16.06,0,0,0,dh">모녀가리비</a>';
+                    
+                    break;
+                case '2':
+                    description.innerHTML = '생닭에서부터 후라이드, 닭강정까지 닭요리의 명물로 자리잡은 닭전골목은 각각의 닭집마다 튀기는 방법, 사용하는 재료(깻잎,더덕,건과류등 다양함)들이 조금식 달라 고유의 맛을 가지고 있어 색다른 닭 강정을 골라 먹을수 있다. 속초 관광수산시장에는 닭강정 골목이 있으니 속초에 오면 꼭 먹어야 할 음식 중 하나이다.<br><br><a href="https://map.naver.com/p/entry/place/1698901257?c=16.06,0,0,0,dh">중앙닭강정</a><br><a href="https://map.naver.com/p/entry/place/31329578?c=16.06,0,0,0,dh">만석닭강정</a>';
+                    break;
+                case '3':
+                    description.innerHTML = '주로 돼지의 대창선지 ,찹쌀, 배추 우거지, 숙주, 배춧잎 등을 버무려 속을 채운 후에 찜통에 쪄서 만든 순대. 아버지의 함경도 사투리인 "아바이"가 의미하는 대로 크고 푸짐하여 다른 지방의 찹쌀밥을 넣지 않은 순대와는 색다른 특색이 있다.<br><br><a href="https://map.naver.com/p/entry/place/11711552?c=16.06,0,0,0,dh">단천식당</a><br><a href="https://map.naver.com/p/entry/place/1027992856?c=16.06,0,0,0,dh">북천전통아바이순대2대본점</a>';
+                    break;
+            }
+         }
+         
+    </script>
+</body>
+</html>

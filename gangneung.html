@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강릉</title>
+    <style>
+        div{
+            height: 200px;
+            background-color: rgb(219, 235, 249);
+        }
+        div.tour{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.food{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.description1{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        div.description2{
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tour">
+        <h2>관광지</h2>
+        <form>
+            <select name="tour" id="tour" onchange="showTourDescription()">
+                <option value="1">안반데기</option>
+                <option value="2">아르떼뮤지엄 강릉</option>
+                <option value="3">하슬라아트월드</option>
+                <option value="4">오죽헌</option>
+                <option value="5">안목해변</option>
+            </select>
+        </form>
+    </div>
+    <div class="description1" id="description1"></div><br>
+    <div class="food">
+        <h2>음식</h2>
+        <form>
+            <select name="food" id="food" onchange="showFoodDescription()">
+                <option value="1">초당 두부</option>
+                <option value="2">감자옹심이</option>
+                <option value="3">물회</option>
+            </select>
+        </form>
+    </div>
+    <div class="description2" id="description2"></div>
+
+    <script>
+         function showTourDescription() {
+            const select = document.getElementById('tour');
+            const description = document.getElementById('description1');
+            const value = select.value;
+
+            switch (value) {
+                case '1':
+                    description.innerHTML = '안반데기 마을은 해발 1100m 고산지대로 떡메로 떡을 치는 안반처럼 우묵하면서도 널찍한 지형이 있어 안반데기라고 불리게 되었다. 산이 배추밭이고, 배추밭이 곧 산이다. ‘안반’은 떡메로 반죽을 내리칠 때 쓰는 오목하고 넓은 통나무 받침판을, ‘데기’는 평평한 땅을 말한다. 경사가 가팔라서 기계농이 불가능하므로 농부의 힘이 고스란히 들어간 곳이다.<br><br><a href="https://map.naver.com/p/entry/place/1374746393?c=16.06,0,0,0,dh">안반데기</a>';
+                    break;
+                case '2':
+                    description.innerHTML = '몰입형 미디어아트 전시관 강릉 아르떼뮤지엄 강릉은 제주, 여수에 이은 세 번째 아르떼뮤지엄 시리즈의 3번째 전시관이다. 신규 건축물을 건립하여 선보이는만큼 기존 전시관들에 비해 최적화된 공간 형태와 더 큰 규모의 전시 면적공간을 확보함으로써 한층 더 다채로운 전시 작품들로 구성되어 있다. 국내외 찬사를 받은 퍼블릭 미디어아트 WAVE의 제작사로 유명한 디지털 디자인 대표전문기업 디스트릭트가 조성한 전시관으로 세계적인 수준의 실감 콘텐츠 제작 역량 및 콘텐츠 개발력과 강릉 문화예술의 고유한 멋이 접목되어 색다른 감동을 느낄 수 있다.<br><br><a href="https://map.naver.com/p/entry/place/1090555407?lng=128.9072579&lat=37.791673&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh">아르떼뮤지엄 강릉</a>';
+                    break;
+                case '3':
+                    description.innerHTML = '하슬라아트월드는 뮤지엄호텔, 야외조각공원, 현대미술관, 피노키오박물관, 레스토랑, 바다카페가 있는 복합문화공간으로 다양한 예술작품과 아름다운 자연을 함께 감상할 수 있다.<br><br><a href="https://map.naver.com/p/entry/place/11626644?c=15.00,0,0,0,dh">하슬라아트월드</a>';
+                    break;
+                case '4':
+                    description.innerHTML = '오죽헌은 강릉시 죽헌동에 위치하고 있는 조선 중기의 목조건물로 국가유산으로 지정되어 있다. 이 건물은 조선시대 양식으로 정면3칸, 측면 2칸으로 이루어져 있으며 신사임당과 율곡이이가 태어난 집으로 유명한 명소이기도 하다.<br><br><a href="https://map.naver.com/p/entry/place/13553344?c=15.00,0,0,0,dh">오죽헌</a>';
+                    break;
+                case '5':
+                    description.innerHTML = '안목해변은 아름다운 커피거리로 전국에서도 손꼽히는 곳이다. 가을에는 커피 축제를 열고 해안선이 쭉 이어져 있어 긴 해안선을 따라 드라이브를 하면 여러 관광지까지 함께 볼 수 있다. 특히나 강릉 커피 거리에서 유명한 몇몇 커피집을 가면 저마다 독특한 커피의 향과 맛을 느낄 수 있을 뿐만 아니라 가게마다 자랑하는 디저트들을 맛보는 것 또한 즐겁다.<br><br><a href="https://map.naver.com/p/entry/place/13491906?c=16.06,0,0,0,dh">안목해변</a>';
+                    break;
+            }
+         }
+         function showFoodDescription() {
+            const select = document.getElementById('food');
+            const description = document.getElementById('description2');
+            const value = select.value;
+
+            switch (value) {
+                case '1':
+                    description.innerHTML = '‘초당’은 조선 중기의 문신이자 성리학자였던 허엽의 호다. 허엽은 허난설헌과 ‘홍길동전’의 작가 허균의 아버지이기도 하다. 그가 강릉부사로 재임할 때 탄생한 게 바로 초당두부였다. 허엽은 바닷물이라는 천연 간수로 두부를 만들게 했고 그 특유의 맛이 소문이 나면서 강릉의 대표 음식이 됐다.<br><br><a href="https://map.naver.com/p/search/%EB%8F%99%ED%99%94%EA%B0%80%EB%93%A0%20%EB%B3%B8%EC%A0%90/place/11859878?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh">동화가든 본점</a><br><a href="http://map.naver.com/p/search/%EC%88%9C%EB%91%90%EB%B6%80%EC%A0%A4%EB%9D%BC%EB%98%90%20%EA%B0%95%EB%A6%89/place/674248763?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place">순두부젤라또</a>';
+                    
+                    break;
+                case '2':
+                    description.innerHTML = '쌀이 귀하던 시절 강원특별자치도의 주식은 감자였다. 강릉에서는 감자를 갈아서 완자처럼 만드는 새알심, 강릉 사투리로 ‘옹심이’를 즐겨 먹었다. 한 알 한 알 정성으로 빚은 감자옹심이는 쫀득한 식감에 시원한 국물이 더해져 깊은 맛을 자랑한다.<br><br><a href="https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%EC%97%AD%20%EC%98%B9%EB%A7%89/place/1419683252?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place">강릉역 옹막</a><br><a href="https://map.naver.com/p/entry/place/15291531?c=15.00,0,0,0,dh">강릉감자옹심</a>';
+                    break;
+                case '3':
+                    description.innerHTML = '물회는 갓 잡아 올린 생선이나 오징어를 날로 잘게 썰어서 새콤달콤 양념에 채소를 버무려 물을 부어 먹는 음식이다. 조업을 하던 어부들이 배에서 끼니를 때우기 위해 먹던 음식으로 알려져 있다.<br><br><a href="https://map.naver.com/p/search/%ED%83%9D%EC%A7%80%EB%AC%BC%ED%9A%8C/place/15380722?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">택지물회</a><br><a href="https://map.naver.com/p/entry/place/31371894?c=15.00,0,0,0,dh">사천항 주문진물회</a>';
+                    break;
+            }
+         }
+         
+    </script>
+</body>
+</html>
