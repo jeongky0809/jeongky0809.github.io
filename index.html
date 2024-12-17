@@ -3,28 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강릉 여행 가이드</title>
+    <title>웹프로그래밍기초_기말과제</title>
     <style>
     h1{
         text-align: center;
         background-color: rgb(219, 235, 249);
+        font-size: 60px;
+    }
+    h2{
+        text-align: center;
+        top: 50px; 
+        color: black; 
+        font-size: 40px; 
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 20px auto;
     }
     div{
-        background-color: rgb(233, 243, 251);
-        height: 400px;
+        width: auto;
+        height: 300px;
+        background-color: rgb(219, 235, 249);
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        margin: 20px auto;
+    }
+    a{
+        text-decoration: none;
     }
     </style>
 </head>
 <body>
-    <h1>강릉 여행 가이드</h1>
-    <div id="day1">
-        <h3>1일차</h3>
-    </div>
-    <div id="day2">
-        <h3>2일차</h3>
-    </div>
-    <div id="day3">
-        <h3>3일차</h3>
+    <h1>강원도 여행 가이드</h1><br>
+    <div class="gangneung">
+        <a href="gangneung.html"><h2>강릉</h2></a>
+    </div><br>
+    <div class="sokcho">
+        <a href="sokcho.html"><h2>속초</h2></a>
+    </div><br>
+    <div class="chuncheon">
+        <a href="chuncheon.html"><h2>춘천</h2></a>
     </div>
 </body>
 </html>
